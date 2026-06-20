@@ -2,7 +2,7 @@
 
 $PrivateSource = "D:\Study\Obsidian Vault\2026春学期期末考试内容"
 $PublicRepo = "D:\Study\2026-Final-Review"
-$SubjectDirs = @("操作系统", "数据库原理", "计算机组成")
+$SubjectDirs = @("操作系统", "数据库原理", "计算机组成", "计算机网络")
 
 if (!(Test-Path -LiteralPath $PrivateSource)) {
   throw "Private source not found: $PrivateSource"
@@ -56,3 +56,4 @@ if ([string]::IsNullOrWhiteSpace($changes)) {
 }
 
 git push origin main
+
