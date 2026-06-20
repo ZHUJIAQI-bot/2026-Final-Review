@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"root","type":"text","text":"# 计算机组成期末复习\n\n依据：PPT第1-10章 + 去年回忆卷 + 作业截图\n\n核心策略：先练计算和画图，再背过程与比较题。","x":0,"y":0,"width":420,"height":190,"color":"1"},
+		{"id":"priority","type":"text","text":"## A级必练\n\n1. 存储器扩展与片选\n2. Cache字段与命中率\n3. 中断响应与屏蔽字\n4. DMA寄存器与流程\n5. IEEE754与浮点运算\n6. 寻址方式EA\n7. 流水线性能\n8. 微操作序列","x":520,"y":-360,"width":380,"height":300,"color":"2"},
+		{"id":"memory","type":"text","text":"## 第4章 存储器\n\n- 位扩展：并联扩数据位\n- 字扩展：译码扩容量\n- 片内地址：低位地址线\n- 片选：高位地址译码\n- Cache：Tag / 组号 / 块内地址\n- 磁盘：容量、位密度、传输率、等待时间","x":520,"y":0,"width":420,"height":270,"color":"3"},
+		{"id":"io","type":"text","text":"## 第5章 I/O系统\n\n- 查询：CPU等待，低速简单设备\n- 中断：指令结束响应，保存断点/现场\n- DMA：AR、WC、DAR、控制寄存器\n- DMA流程：预处理 -> 数据传送 -> 后处理","x":520,"y":340,"width":420,"height":250,"color":"4"},
+		{"id":"arith","type":"text","text":"## 第6章 运算方法\n\n- 原码、反码、补码、移码\n- 补码加减与溢出\n- 浮点格式：阶符、阶码、数符、尾数\n- IEEE754：S/E/M = 1/8/23\n- 浮点加减：对阶、求和、规格化","x":1020,"y":-360,"width":420,"height":270,"color":"5"},
+		{"id":"instr","type":"text","text":"## 第7章 指令系统\n\n- 指令格式：操作码 + 地址码\n- 立即：操作数=D\n- 直接：EA=D\n- 间接：EA=(D)\n- 相对：EA=PC+D\n- 变址：EA=D+Z\n- RISC vs CISC","x":1020,"y":-20,"width":420,"height":290,"color":"6"},
+		{"id":"cpu","type":"text","text":"## 第8章 CPU结构与功能\n\n- CPU：ALU、CU、寄存器组、中断系统\n- 指令周期：取指、间址、执行、中断\n- 流水线：结构/数据/控制冲突\n- 性能：T=(k+n-1)Delta t，TP=n/T，S=T0/T","x":1020,"y":340,"width":430,"height":280,"color":"1"},
+		{"id":"control","type":"text","text":"## 第9-10章 控制单元\n\n取指：PC->MAR；1->R；M(MAR)->MDR；MDR->IR；OP(IR)->CU；PC+1->PC\n\nSTA执行：Ad(IR)->MAR；1->W；AC->MDR；MDR->M(MAR)\n\n组合逻辑快但难改；微程序易改但较慢。","x":1520,"y":0,"width":460,"height":330,"color":"2"},
+		{"id":"exam","type":"text","text":"## 去年卷对应题型\n\n1 流水线冲突\n2 中断响应\n3 单总线瓶颈\n4 存储器扩展\n5 Cache映射\n6 屏蔽字轨迹\n7 DMA配置\n8 IEEE754\n9 寻址方式\n10 流水线计算\n11 微操作补全","x":1520,"y":-400,"width":430,"height":320,"color":"3"},
+		{"id":"answer","type":"text","text":"## 解答题拿分模板\n\n- 计算题：公式 -> 代入 -> 结果 -> 单位\n- 过程题：按时间顺序写\n- 比较题：列表分维度\n- 画图题：字段、线名、片选、方向标清\n- 易混点：字节编址/字编址、提高到/提高了、立即寻址无EA","x":1520,"y":420,"width":430,"height":260,"color":"4"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"root","fromSide":"right","toNode":"priority","toSide":"left"},
+		{"id":"e2","fromNode":"root","fromSide":"right","toNode":"memory","toSide":"left"},
+		{"id":"e3","fromNode":"root","fromSide":"right","toNode":"io","toSide":"left"},
+		{"id":"e4","fromNode":"priority","fromSide":"right","toNode":"arith","toSide":"left"},
+		{"id":"e5","fromNode":"priority","fromSide":"right","toNode":"instr","toSide":"left"},
+		{"id":"e6","fromNode":"priority","fromSide":"right","toNode":"cpu","toSide":"left"},
+		{"id":"e7","fromNode":"cpu","fromSide":"right","toNode":"control","toSide":"left"},
+		{"id":"e8","fromNode":"priority","fromSide":"right","toNode":"exam","toSide":"left"},
+		{"id":"e9","fromNode":"exam","fromSide":"bottom","toNode":"answer","toSide":"top"},
+		{"id":"e10","fromNode":"memory","fromSide":"right","toNode":"answer","toSide":"left"},
+		{"id":"e11","fromNode":"io","fromSide":"right","toNode":"answer","toSide":"left"}
+	]
+}
