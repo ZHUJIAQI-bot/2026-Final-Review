@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"db_g_core","type":"group","x":-840,"y":-680,"width":1620,"height":1110,"color":"1","label":"数据库原理期末复习主图"},
+		{"id":"db_g_files","type":"group","x":-560,"y":640,"width":1130,"height":340,"color":"6","label":"已生成资料入口"},
+		{"id":"db_er","type":"text","text":"## E-R 图与关系模式\n\n- 文本抽实体、属性、联系\n- 标注 1:1、1:N、M:N\n- 联系属性放对位置\n- 转关系模式并写主键外键","x":-130,"y":-640,"width":290,"height":200,"color":"2"},
+		{"id":"db_sql","type":"text","text":"## SQL 语句\n\n- DDL：CREATE、DROP、ALTER\n- DML：INSERT、UPDATE、DELETE\n- DQL：SELECT\n- DCL：GRANT、REVOKE\n- 高频：连接、嵌套、分组、视图、授权","x":-680,"y":-550,"width":300,"height":220,"color":"1"},
+		{"id":"db_ra","type":"text","text":"## 关系代数\n\n- 选择、投影、连接\n- 并、差、笛卡尔积\n- 除法：全部、至少包含\n- 去年卷第 1 题全英文，注意英文题眼","x":-760,"y":-255,"width":300,"height":220,"color":"3"},
+		{"id":"db_tx","type":"text","text":"## 事务与并发\n\n- ACID\n- 丢失修改、脏读、不可重复读\n- X 锁与 S 锁\n- 一级、二级、三级封锁协议","x":-760,"y":115,"width":300,"height":190,"color":"5"},
+		{"id":"db_norm","type":"text","text":"## 关系规范化\n\n- 函数依赖\n- 候选码\n- 部分依赖、传递依赖\n- 1NF、2NF、3NF\n- 无损连接和保持依赖\n- 这是高难度高分点","x":400,"y":-560,"width":300,"height":230,"color":"1"},
+		{"id":"db_integrity","type":"text","text":"## 完整性与安全\n\n- 实体完整性：PRIMARY KEY\n- 参照完整性：FOREIGN KEY\n- 用户定义完整性：NOT NULL、UNIQUE、CHECK\n- Trigger 框架\n- GRANT、REVOKE、WITH GRANT OPTION","x":400,"y":-255,"width":300,"height":250,"color":"4"},
+		{"id":"db_order","type":"text","text":"## 刷题顺序\n\n1. SQL 手写\n2. E-R 转换\n3. FD 与范式\n4. 关系代数\n5. 授权与完整性\n6. ACID 和封锁协议","x":400,"y":115,"width":300,"height":225,"color":"2"},
+		{"id":"db_center","type":"text","text":"# 数据库原理期末\n\n全部解答题\n约 40% 英文题干\n\n主线：SQL、E-R、规范化、关系代数","x":-145,"y":-255,"width":300,"height":150,"color":"6"},
+		{"id":"db_f_errata","type":"file","file":"2026春学期期末考试内容/数据库原理/数据库原理复习资料勘误.md","x":220,"y":700,"width":310,"height":240,"color":"4"},
+		{"id":"db_f_mind","type":"file","file":"2026春学期期末考试内容/数据库原理/数据库原理期末复习思维导图.md","x":-520,"y":700,"width":310,"height":240,"color":"6"},
+		{"id":"db_f_exam","type":"file","file":"2026春学期期末考试内容/数据库原理/数据库原理期末模拟试卷_全解答题.md","x":-135,"y":700,"width":310,"height":240,"color":"1"},
+		{"id":"db_exam","type":"text","text":"## 去年题型\n\n- 关系代数 7 小问\n- SQL 建表、视图、查询、统计\n- FD、候选码、范式分解\n- E-R 转关系模式\n- 数据库授权","x":-145,"y":195,"width":290,"height":220,"color":"6"}
+	],
+	"edges":[
+		{"id":"db_e_sql","fromNode":"db_center","fromSide":"left","toNode":"db_sql","toSide":"right","label":"S"},
+		{"id":"db_e_er","fromNode":"db_center","fromSide":"top","toNode":"db_er","toSide":"bottom","label":"S"},
+		{"id":"db_e_norm","fromNode":"db_center","fromSide":"right","toNode":"db_norm","toSide":"left","label":"A"},
+		{"id":"db_e_ra","fromNode":"db_center","fromSide":"left","toNode":"db_ra","toSide":"right","label":"A"},
+		{"id":"db_e_integrity","fromNode":"db_center","fromSide":"right","toNode":"db_integrity","toSide":"left"},
+		{"id":"db_e_tx","fromNode":"db_center","fromSide":"bottom","toNode":"db_tx","toSide":"top"},
+		{"id":"db_e_exam","fromNode":"db_center","fromSide":"bottom","toNode":"db_exam","toSide":"top"},
+		{"id":"db_e_order","fromNode":"db_center","fromSide":"bottom","toNode":"db_order","toSide":"top"},
+		{"id":"db_e_file1","fromNode":"db_center","fromSide":"bottom","toNode":"db_f_mind","toSide":"top"},
+		{"id":"db_e_file2","fromNode":"db_center","fromSide":"bottom","toNode":"db_f_exam","toSide":"top"},
+		{"id":"db_e_file3","fromNode":"db_center","fromSide":"bottom","toNode":"db_f_errata","toSide":"top"}
+	]
+}
